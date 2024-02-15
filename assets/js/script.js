@@ -101,9 +101,12 @@ window.addEventListener("DOMContentLoaded", function () {
                 <td>${bookObject.author}</td>
                 <td>${bookObject.year}</td>
                 <td class="btn-action-container">
-                  <button class="btn btn-check" data-id="${bookObject.id}"><i class="fa-regular fa-circle-check fa-xl"></i></button>
-                  <button class="btn btn-edit" data-id="${bookObject.id}"><i class="fa-solid fa-pen-to-square"></i>Ubah</button>
-                  <button class="btn btn-delete" data-id="${bookObject.id}"><i class="fa-solid fa-trash-can"></i>Hapus</button>
+                <i class="btn btn-primary fa-solid fa-ellipsis-vertical"></i>
+                  <div class="card btn-action-content">
+                    <button class="btn btn-check" data-id="${bookObject.id}"><i class="fa-regular fa-circle-check fa-xl"></i> Done</button>
+                    <button class="btn btn-edit" data-id="${bookObject.id}"><i class="fa-solid fa-pen-to-square fa-xl"></i> Ubah</button>
+                    <button class="btn btn-delete" data-id="${bookObject.id}"><i class="fa-solid fa-trash-can fa-xl"></i> Hapus</button>
+                  </div>
                 </td>
               </tr>
         `;
@@ -113,9 +116,12 @@ window.addEventListener("DOMContentLoaded", function () {
                 <td>${bookObject.author}</td>
                 <td>${bookObject.year}</td>
                 <td class="btn-action-container">
-                  <button class="btn btn-undo" data-id="${bookObject.id}"><i class="fa-solid fa-rotate-left fa-xl"></i></button>
-                  <button class="btn btn-edit" data-id="${bookObject.id}"><i class="fa-solid fa-pen-to-square"></i>Ubah</button>
-                  <button class="btn btn-delete" data-id="${bookObject.id}"><i class="fa-solid fa-trash-can"></i>Hapus</button>
+                <i class="btn btn-primary fa-solid fa-ellipsis-vertical"></i>
+                  <div class="btn-action-content">
+                    <button class="btn btn-undo" data-id="${bookObject.id}"><i class="fa-solid fa-rotate-left fa-xl"></i> Undo</button>
+                    <button class="btn btn-edit" data-id="${bookObject.id}"><i class="fa-solid fa-pen-to-square fa-xl"></i> Ubah</button>
+                    <button class="btn btn-delete" data-id="${bookObject.id}"><i class="fa-solid fa-trash-can fa-xl"></i> Hapus</button>
+                  </div>
                 </td>
               </tr>
               `;

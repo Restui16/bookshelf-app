@@ -31,9 +31,27 @@
 }
 
 .btn-action-container {
-  display: flex;
-  gap: 10px;
+  position: relative;
 }
+
+.btn-action-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  top: 10px;
+  left: -100px;
+}
+
+.btn-action-container:hover .btn-action-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
 
 .alert {
   text-align: center;
@@ -115,10 +133,15 @@
   right: 10px;
 }
 
+.bookshelf {
+  flex: 2;
+}
+
 .list-books {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: auto;
 }
 
 .styled-table {

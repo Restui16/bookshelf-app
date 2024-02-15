@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="assets/book-favicon.png">
+  <title>Bookshelf Apps</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <div id="app">
+    <header style="height: 60px; background-color: #455464;">
+      <h1 class="title" style="text-align: center; line-height: 60px; color: aliceblue;">Bookshelf Apps</h1>
+    </header>
+    <main style="margin: 40px;">
+      <div class="container">
+        <div id="book-container">
+          <div class="card form-container">
+            <form action="#" id="formBook">
+              <div class="form-group">
+                <label for="title" class="title">Judul</label>
+                <input type="text" class="input-text" id="title">
+              </div>
+
+              <div class="form-group">
+                <label for="author" class="title">Penulis</label>
+                <input type="text" class="input-text" id="author">
+              </div>
+
+              <div class="form-group">
+                <label for="year" class="title">Tahun</label>
+                <input type="number" class="input-number" id="year">
+              </div>
+
+              <div class="checkbox-container">
+                <label for="read" class="title">Selesai Dibaca</label>
+                <input type="checkbox" id="read">
+              </div>
+
+              <div class="btn-container">
+                <button type="submit" id="submitBook" class="btn btn-primary btn-submit-book">Tambah Buku </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="card" style="flex: 2;">
+
+            <div class="search-container">
+              <form action="" id="formSearchBook">
+                <div>
+                  <label for="search"><i class="fa-solid fa-magnifying-glass"></i></label>
+                  <input type="text" class="input-text" id="search" placeholder="Search">
+                </div>
+                <button class="btn btn-primary" type="submit">Search</button>
+              </form>
+            </div>
+
+            <hr>
+
+            <div class="bookshelf">
+              <div class="unread-book">
+                <h2>Belum Dibaca</h2>
+                <table class="styled-table">
+                  <thead>
+                    <tr>
+                      <th>Judul</th>
+                      <th>Penulis</th>
+                      <th>Tahun</th>
+                      <th>Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbody-unread">
+
+                  </tbody>
+                </table>
+              </div>
+              <hr>
+              <div class="read-book">
+                <h2>Selesai Dibaca</h2>
+                <table class="styled-table">
+                  <thead>
+                    <tr>
+                      <th>Judul</th>
+                      <th>Penulis</th>
+                      <th>Tahun</th>
+                      <th>Aksi</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbody-read">
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+  <div id="editModal" class="modal">
+    <!-- Modal content -->
+  </div>
+
+  <div id="deleteModal" class="modal">
+    <div class="modal-content">
+      <button class="close" id="closeModalDelete">&times;</button>
+      <div class="content">
+        <h3>Are You Sure?</h3>
+        <p>You won't be able to revert this!</p>
+        <div style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+          <button class="btn btn-danger" id="confirmDelete">Yes, Delete it!</button>
+          <button class="btn btn-primary" id="cancelDelete">cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="assets/js/script.js"></script>
+</body>
+
+</html>

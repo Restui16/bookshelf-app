@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.btn {
+  padding: 0.5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.btn-primary {
+  background-color: #455464;
+  color: aliceblue;
+}
+
+.btn-danger {
+  background-color: red;
+  color: aliceblue;
+}
+
+.alert {
+  text-align: center;
+  display: none;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#book-container {
+  display: flex;
+  gap: 10px;
+}
+
+.card {
+  width: 100%;
+  border: 1px solid gray;
+  padding: 1em;
+  border-radius: 5px;
+  box-shadow: 1px 2px 10px 0.5px rgba(0, 0, 0, 0.2);
+}
+
+.form-container {
+  flex: 1;
+  max-height: 320px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+
+.input-text,
+.input-number {
+  height: 34px;
+  border: none;
+  box-shadow: 1px 2px 10px 0.5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.checkbox-container {
+  display: flex;
+  gap: 10px;
+}
+
+.checkbox-container input {
+  width: 20px;
+  box-shadow: 1px 2px 10px 0.5px rgba(0, 0, 0, 0.2);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+}
+
+.search-container {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.search-container form input {
+  width: 100%;
+}
+
+.search-container form label {
+  position: absolute;
+  top: 7px;
+  right: 10px;
+}
+
+.bookshelf {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    width: 100%;
+}
+
+.styled-table thead tr {
+    background-color: #455464;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #455464;
+}
+
+button .fa-pen-to-square{
+  color: blue;
+}
+
+button .fa-trash-can{
+  color: red;
+}
+
+button .fa-circle-check, .fa-rotate-left {
+  color: green;
+}
+
+#formSearchBook {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#formSearchBook div{
+ flex: 1;
+ position: relative;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  width: 40%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: transparent; /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 100%; /* Could be more or less, depending on screen size */
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+.content {
+  text-align: center;
+  line-height: 50px;
+}
+/* The Close Button */
+.close {
+  position: absolute;
+  color: #aaa;
+  right: 10px;
+  top: 0;
+  border: none;
+  font-size: 2rem;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.close:hover, .close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes animatetop {
+  from {top: -300px; opacity: 0}
+  to {top: 0; opacity: 1}
+}

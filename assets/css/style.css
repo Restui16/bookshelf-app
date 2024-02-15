@@ -30,6 +30,11 @@
   color: aliceblue;
 }
 
+.btn-info {
+  background-color: dodgerblue;
+  color: aliceblue;
+}
+
 .btn-action-container {
   position: relative;
 }
@@ -230,6 +235,7 @@ button .fa-circle-check,
   width: 100%; /* Could be more or less, depending on screen size */
   animation-name: animatetop;
   animation-duration: 0.4s;
+  border-radius: 10px;
 }
 
 .content {

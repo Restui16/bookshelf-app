@@ -215,6 +215,17 @@ button .fa-circle-check, .fa-rotate-left {
   cursor: pointer;
 }
 
+footer {
+  background-color: #455464;
+  color: grey;
+  height: 50px;
+  text-align: right;
+}
+
+footer span {
+  line-height: 50px;
+}
+
 @keyframes animatetop {
   from {top: -300px; opacity: 0}
   to {top: 0; opacity: 1}

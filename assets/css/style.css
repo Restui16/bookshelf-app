@@ -52,6 +52,11 @@
 
 }
 
+.btn-check:hover, .btn-edit:hover, .btn-delete:hover, .btn-undo:hover{
+  font-weight: bold;
+
+}
+
 
 .alert {
   text-align: center;
@@ -210,7 +215,7 @@ button .fa-circle-check,
   transform: translate(-50%, -50%);
   width: 40%; /* Full width */
   height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
+  overflow: hidden; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: transparent; /* Black w/ opacity */
 }
@@ -280,6 +285,10 @@ footer span {
 @media (max-width: 767.98px) {
   #book-container {
     flex-direction: column;
+  }
+
+  .modal {
+    width: 80%;
   }
 }
 

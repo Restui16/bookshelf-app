@@ -102,7 +102,7 @@ window.addEventListener("DOMContentLoaded", function () {
                 <td>${bookObject.year}</td>
                 <td class="btn-action-container">
                 <i class="btn btn-primary fa-solid fa-ellipsis-vertical"></i>
-                  <div class="card btn-action-content">
+                  <div class="card btn-action-content" data-id="${bookObject.id}">
                     <button class="btn btn-check" data-id="${bookObject.id}"><i class="fa-regular fa-circle-check fa-xl"></i> Done</button>
                     <button class="btn btn-edit" data-id="${bookObject.id}"><i class="fa-solid fa-pen-to-square fa-xl"></i> Ubah</button>
                     <button class="btn btn-delete" data-id="${bookObject.id}"><i class="fa-solid fa-trash-can fa-xl"></i> Hapus</button>
@@ -117,7 +117,7 @@ window.addEventListener("DOMContentLoaded", function () {
                 <td>${bookObject.year}</td>
                 <td class="btn-action-container">
                 <i class="btn btn-primary fa-solid fa-ellipsis-vertical"></i>
-                  <div class="btn-action-content">
+                  <div class="card btn-action-content" data-id="${bookObject.id}">
                     <button class="btn btn-undo" data-id="${bookObject.id}"><i class="fa-solid fa-rotate-left fa-xl"></i> Undo</button>
                     <button class="btn btn-edit" data-id="${bookObject.id}"><i class="fa-solid fa-pen-to-square fa-xl"></i> Ubah</button>
                     <button class="btn btn-delete" data-id="${bookObject.id}"><i class="fa-solid fa-trash-can fa-xl"></i> Hapus</button>
@@ -133,6 +133,7 @@ window.addEventListener("DOMContentLoaded", function () {
     const undoButton = document.querySelectorAll(".btn-undo");
     const deleteButton = document.querySelectorAll(".btn-delete");
     const editButton = document.querySelectorAll(".btn-edit");
+   
     checkButton.forEach((btn) => {
       btn.addEventListener("click", function () {
         const bookId = Number(btn.getAttribute("data-id"));
